@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+   
+    background-color: #f5dcdb;
+    font-family:"Jost", monospace;
+}
+
+.logo {
+    font-family: "Passion One", sans-serif;
+    color: #595194;
+    align-items: center;
+    font-size: 50px;
+}
+
+.logo:hover { 
+    background: linear-gradient(315deg, hsla(247, 52%, 38%, 1) 7%, hsla(342, 93%, 56%, 1) 59%, hsla(40, 67%, 58%, 1) 81%);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-logo 2.5s linear infinite;
+}
+
+@keyframes animate-logo {
+    to {
+        background-position: 200%;
+    }
+}
+
+
+nav {
+    display: flex;
+    background-color: #b9727b;
+    justify-content: space-evenly; 
+    align-items: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+    width:100% ;
+}
+
+nav div ul {
+    display: flex;
+    
+    list-style: none;
+    width: 100%;
+}
+
+
+nav ul li {
+    position: relative;
+    padding: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #b9727b;
+    list-style: none;
+    display: none;
+    z-index: 20;
+}
+
+.dropdown li {
+    text-align: center;
+    padding:8px 5px;
+
+}
+
+nav ul li:hover .dropdown {
+    display: block; 
+}
+
+.dropdown li:hover {
+    background-color: #be8382;
+    color: #b9727b;
+}
+
+
+/*Section Hero */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(
+        180deg,
+        rgba(185,45,85, 0.438),
+        rgba(238, 1, 68, 0.438)
+    );
+    color: white;
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+     z-index: 1;
+}
+
+.video-background {
+position: absolute;
+z-index: -1;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+min-width: 100%;
+min-height: 100%;
+opacity: 0.4;
+}
+
+.hero h1 {
+    
+    font-size: 90px;
+    font-family: "Marcellus", system-ui;
+    text-shadow: black;
+    margin-bottom: 15px;
+}
+
+.hero__btn button{
+    padding: 25px;
+    width: 200px;
+    border: #595194 solid 3px;
+    border-radius: 10px;
+    margin: 15px;
+    font-size: large;  
+}
+
+.hero__btn button a {
+    text-decoration: none;
+    color: #342e64;
+    text-shadow: black;
+}
+
+.hero__btn button:hover{
+
+    border: #0f046b solid 3px; 
+    background: linear-gradient(315deg, hsla(247, 52%, 38%, 1) 7%, hsla(342, 93%, 56%, 1) 59%, hsla(40, 67%, 58%, 1) 81%);
+ 
+}
+
+
+/* Page produit*/
+.page-produits nav{
+    border-top: 5px#595194 solid;
+    border-bottom:5px#595194 solid ;
+}
+
+.page-produits nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.page-produits button {
+    padding: 10px;
+    border: #595194 solid 3px;
+    border-radius: 10px;
+}
+
+.page-produits h1 {
+    text-align: center;
+    padding: 15px ;
+}
+
+.page-produits-main{
+    display: flex;
+    padding:  20px;
+}
+
+.produit-vedette p{
+margin: 20px 0;
+}
+
+.produit-vedette button{
+ padding: 20px;
+ background:#ac3444;
+ color: white;
+ font-size: 20px;
+ border: none;
+}
+
+.produit-liste {
+display: flex;
+padding:  20px;
+
+}
+
+.produit-liste-item {
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+    background: #f1c3c3;
+    width: 400px;
+    height: 600px;
+}
+
+.produit-liste-item img{
+    width: 300px;
+    height: auto;
+ 
+}
+
+.produit-liste-item h3{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+
+.hero, .page-produits, .page-promotion, .page-succursalles {
+    padding-top: 60px; /* Adjust according to your nav height */
+}
+
+/* Tutoriels utilisé:
+Video dans la section hero : https://www.youtube.com/watch?v=RIDA6elhmBU&ab_channel=KevinPowell
+*/
