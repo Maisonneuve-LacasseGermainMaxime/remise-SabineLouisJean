@@ -6,7 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="assets/js/main.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="assets/js/page-produits.js" defer></script>
+    <script src="assets/js/page-promotion.js" defer></script>
+    <script src="assets/js/popup.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&display=swap"
@@ -100,16 +103,16 @@
           <li><a href="">Gâteaux</a></li>
         </ul>
         <ul>
-          <li><button>Trier A-Z</button></li>
-          <li><button>Trier Z-A</button></li>
-          <li><button>Trier par prix croissant</button></li>
+          <li><button class="filtre-ordre-alphabetique ">Trier A-Z</button></li>
+          <li><button class="filtre-ordre-alphabetique-decroissant">Trier Z-A</button></li>
+          <li><button class="filtre-prix-croissant">Trier par prix croissant</button></li>
         </ul>
       </nav>
       <h1>Produits vedette</h1>
       <div class="page-produits-main">
         <div class="produit-vedette">
           <img
-            src="assets/img/luisana-zerpa-MJPr6nOdppw-unsplash-removebg-preview.png"
+            src="assets/img/cupcakes/cupcake-1-banana.png"
             alt=""
             class="produit-vedette-image"
           />
@@ -124,72 +127,30 @@
           <button>Ajouter au panier</button>
         </div>
 
-        <div class="produit-liste">
-          <div>
-            <div class="produit-liste-item">
-              <img
-                src="assets/img/luisana-zerpa-MJPr6nOdppw-unsplash-removebg-preview.png"
-                alt=""
-              />
-              <h3>Gâteau au fraises</h3>
-            </div>
-
-            <div class="produit-liste-item">
-              <img
-                src="assets/img/yoga-nova-diansyah-crZJRr4LoeA-unsplash-removebg-preview.png"
-                alt=""
-              />
-              <h3>Gâteau au fraises</h3>
-            </div>
-          </div>
-
-          <div>
-            <div class="produit-liste-item">
-              <img
-                src="assets/img/yoga-nova-diansyah-V5Si1xOeOgE-unsplash-removebg-preview.png"
-                alt=""
-              />
-              <h3>Gâteau au fraises</h3>
-            </div>
-
-            <div class="produit-liste-item">
-              <img
-                src="assets/img/pexels-karina-kungla-706120564-18368577-removebg-preview.png"
-                alt=""
-              />
-              <h3>Gâteau au fraises</h3>
-            </div>
-          </div>
-
-          <div>
-            <div class="produit-liste-item">
-              <img
-                src="assets/img/pexels-karina-kungla-706120564-18198982-removebg-preview (1).png"
-                alt=""
-              />
-              <h3>Gâteau au fraises</h3>
-            </div>
-
-            <div class="produit-liste-item">
-              <img
-                src="assets/img/chloe-benko-prieur-BJvZgI7p2mY-unsplash-removebg-preview.png"
-                alt=""
-              />
-              <h3>Gâteau au fraises</h3>
-            </div>
-          </div>
-        </div>
+        <div class="produit-liste"></div>
       </div>
     </section>
 
     <section class="page-promotion">
+      <div class="popup" id="abonnementPopup">
+        <div class="popup-content">
+          <span class="fermer-btn" id="fermerPopup">&times;</span>
+          <h2>Abonnez-vous à notre infolettre</h2>
+          <p>Obtenez 10% de rabais sur votre premiere commande et recevez nos promotions!</p>
+          <form>
+            <input type="email" placeholder="Entrer votre courriel" required>
+            <button type="submit">S'inscrire</button>
+          </form>
+        </div>
+      </div>
+
       <h1 class="promotion-title">6 à 6</h1>
       <p class="promotion text">
         Obtenez 6 beignets pour 6 dollars,tous les samedis.
       </p>
       <button class="arriere">&#11207;</button>
       <img
-        src="assets/img/promo_donuts.jpg"
+        src="assets/img/promo-donuts.jpg"
         alt=""
         class="carousel-image-promo"
       />
@@ -199,3 +160,9 @@
     <section class="page-succursalles"></section>
   </body>
 </html>
+
+
+
+
+
+
