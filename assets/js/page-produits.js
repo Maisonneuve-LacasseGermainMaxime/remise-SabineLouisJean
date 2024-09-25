@@ -11,7 +11,7 @@ const listeCupcake = [
     },
     { 
         id: 2,
-        titre : "Choco-Noiseette" ,
+        titre : "Choco-Noisette" ,
         description : "Cupcake au chocolat et noisettes.",
         prix :13.99,
         lienImage : "assets/img/cupcakes/cupcake-2-hazelnut.png",
@@ -23,7 +23,7 @@ const listeCupcake = [
         description : "Cupcake ultra-moelleux avec un glaçage au fromage à la crème.",
         prix :14.99 ,
         lienImage : "assets/img/cupcakes/cupcake-3-redVelvet.png",
-        alt: "Cupcake redf velvet.",
+        alt: "Cupcake red velvet.",
     },
     {   
         id: 4,

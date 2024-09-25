@@ -9,6 +9,8 @@
     <script src="assets/js/page-produits.js" defer></script>
     <script src="assets/js/page-promotion.js" defer></script>
     <script src="assets/js/popup.js" defer></script>
+    <script src="assets/js/carousel.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -134,27 +136,27 @@
     <section class="page-promotion">
       <div class="popup" id="abonnementPopup">
         <div class="popup-content">
-          <span class="fermer-btn" id="fermerPopup">&times;</span>
+          <span class="material-symbols-outlined">close</span>
           <h2>Abonnez-vous à notre infolettre</h2>
           <p>Obtenez 10% de rabais sur votre premiere commande et recevez nos promotions!</p>
-          <form>
+          <form action="index.html" method="get">
             <input type="email" placeholder="Entrer votre courriel" required>
             <button type="submit">S'inscrire</button>
           </form>
         </div>
       </div>
 
-      <h1 class="promotion-title">6 à 6</h1>
-      <p class="promotion text">
-        Obtenez 6 beignets pour 6 dollars,tous les samedis.
-      </p>
-      <button class="arriere">&#11207;</button>
-      <img
-        src="assets/img/promo-donuts.jpg"
-        alt=""
-        class="carousel-image-promo"
-      />
-      <button class="avant">&#11208;</button>
+      <div class="section-carousel">
+        <div >
+          <img src="assets/img/promo-birthday.jfif" alt="" class="container-image-principale">
+          <h3 class="carousel-titre"></h3>
+          <p class="carousel-texte"></p>
+        </div>
+     
+
+        <button class="arriere">&#11207;</button>
+        <button class="avant">&#11208;</button>
+      </div>
     </section>
 
     <section class="page-succursalles"></section>
