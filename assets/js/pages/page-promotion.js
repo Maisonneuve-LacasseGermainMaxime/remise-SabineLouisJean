@@ -31,7 +31,7 @@ const listePromotion = [
 
 
 
-function init (){
+ export default function init (){
 
 }
 

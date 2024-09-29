@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&family=Passion+One:wght@400;700;900&display=swap');
+
+
+:root {
+    --font-family-primary: "Marcellus", system-ui;
+    --font-family-secondary: "Jost", system-ui;;
+
+    --font-size-xs: 8px;
+    --font-size-sm: 12px;
+    --font-size-md: 16px;
+    --font-size-lg: 24px;
+    --font-size-xl:32px;
+    --font-size-xxl: 36px;
+    --font-size-xxxl: 42px;
+}

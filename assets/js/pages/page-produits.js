@@ -69,7 +69,7 @@ const triPrixCroissant = document.querySelector(".filtre-prix-croissant");
 
 // Fonctions //
 
-function init() {
+export default function init() {
     afficherListe(listeCupcake);
 
 
@@ -149,4 +149,4 @@ triAlphabetiqueCroissant.addEventListener("click", function () {
     trier(listeCupcake, "prix", "asc");
   });
 
-init();
+//init();

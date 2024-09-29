@@ -1,0 +1,10 @@
+Mon site est Sweetie Pie, un site pour la vente de cupcakes,gateaux et autres patisseries. Le design est inspiré par Willy Wonka, Candy Crush et Strawberry Shortcake.
+
+Voici le lien pour mon moodbaord : https://www.figma.com/design/7csZXGkUvSCb7swHCCVHml/Untitled?node-id=8-2&t=q0NHk1KrjmHMRbiD-1
+
+
+J'ai organisé les fichiers en fesant reference a la structure du cours 15.
+J'ai utilisé le site https://validator.w3.org/  pour verfier la validité du site.
+J'ai eu de la difficulté au niveau des imports/exports,
+une fois que jai fini de programmer mes functions rendu a l'etape import/export je n'eatais plus sur quelle partie de la fonction que je devais exporter.
+Sinon, le reste c'est relativement bien passé

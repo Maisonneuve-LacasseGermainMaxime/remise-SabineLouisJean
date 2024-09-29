@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="assets/js/main.js" defer></script>
-    <script src="assets/js/page-produits.js" defer></script>
-    <script src="assets/js/page-promotion.js" defer></script>
-    <script src="assets/js/popup.js" defer></script>
-    <script src="assets/js/carousel.js" defer></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <script src="assets/js/main.js" type="module"></script>
+    <script src="assets/js/pages/page-produits.js" type="module"></script>
+    <script src="assets/js/pages/page-promotion.js" type="module"></script>
+    <script src="assets/js/components/popup.js" type="module"></script>
+    <script src="assets/js/classes/carousel.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&display=swap"
@@ -32,7 +35,7 @@
       <div>
         <ul>
           <li>
-            <a href="">Produits</a>
+            <a href="#">Produits</a>
             <ul class="dropdown">
               <li><a href="">Cupcakes</a></li>
               <li><a href="">Tartes</a></li>
@@ -42,7 +45,7 @@
           </li>
 
           <li>
-            <a href="">Promotions</a>
+            <a href="index.html/page-promotion">Promotions</a>
           </li>
 
           <li>
@@ -81,6 +84,27 @@
           </li>
         </ul>
       </div>
+
+      <div>
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                src="assets/img/light_mode_icon.svg"
+                alt="light_mode_icon"
+                class="ligh-mode"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="assets/img/dark_mode_icon.svg"
+                alt="dark_mode_icon"
+                class="dark-mode"
+            /></a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <section class="hero">
       <h1>
@@ -88,8 +112,8 @@
         sucré votre ame.
       </h1>
       <div class="hero__btn">
-        <button><a href="">Produits</a></button>
-        <button><a href="">Promotions</a></button>
+        <button><a href="#">Produits</a></button>
+        <button><a href="#">Promotions</a></button>
       </div>
       <video class="video-background" autoplay muted loop>
         <source src="assets/video/hero_video.mp4" type="video/mp4" />
@@ -99,15 +123,23 @@
     <section class="page-produits">
       <nav>
         <ul>
-          <li><a href="">Cupcakes</a></li>
-          <li><a href="">Tartes</a></li>
-          <li><a href="">Beignes</a></li>
-          <li><a href="">Gâteaux</a></li>
+          <li><a href="#">Cupcakes</a></li>
+          <li><a href="#">Tartes</a></li>
+          <li><a href="#">Beignes</a></li>
+          <li><a href="#">Gâteaux</a></li>
         </ul>
         <ul>
-          <li><button class="filtre-ordre-alphabetique ">Trier A-Z</button></li>
-          <li><button class="filtre-ordre-alphabetique-decroissant">Trier Z-A</button></li>
-          <li><button class="filtre-prix-croissant">Trier par prix croissant</button></li>
+          <li><button class="filtre-ordre-alphabetique">Trier A-Z</button></li>
+          <li>
+            <button class="filtre-ordre-alphabetique-decroissant">
+              Trier Z-A
+            </button>
+          </li>
+          <li>
+            <button class="filtre-prix-croissant">
+              Trier par prix croissant
+            </button>
+          </li>
         </ul>
       </nav>
       <h1>Produits vedette</h1>
@@ -134,37 +166,37 @@
     </section>
 
     <section class="page-promotion">
-      <div class="popup" id="abonnementPopup">
+      <h1>Promotions</h1>
+      <div class="popup invisible" id="abonnementPopup">
         <div class="popup-content">
           <span class="material-symbols-outlined">close</span>
           <h2>Abonnez-vous à notre infolettre</h2>
-          <p>Obtenez 10% de rabais sur votre premiere commande et recevez nos promotions!</p>
+          <p>
+            Obtenez 10% de rabais sur votre premiere commande et recevez nos
+            promotions!
+          </p>
           <form action="index.html" method="get">
-            <input type="email" placeholder="Entrer votre courriel" required>
+            <input type="email" placeholder="Entrer votre courriel" required />
             <button type="submit">S'inscrire</button>
           </form>
         </div>
       </div>
 
       <div class="section-carousel">
-        <div >
-          <img src="assets/img/promo-birthday.jfif" alt="" class="container-image-principale">
+        <div>
+          <img
+            src="assets/img/promo-birthday.jfif"
+            alt=""
+            class="container-image-principale"
+          />
           <h3 class="carousel-titre"></h3>
           <p class="carousel-texte"></p>
+          <button class="arriere">&#11207;</button>
+          <button class="avant">&#11208;</button>
         </div>
-     
-
-        <button class="arriere">&#11207;</button>
-        <button class="avant">&#11208;</button>
       </div>
     </section>
 
     <section class="page-succursalles"></section>
   </body>
 </html>
-
-
-
-
-
-

@@ -138,7 +138,8 @@ opacity: 0.4;
     border: #595194 solid 3px;
     border-radius: 10px;
     margin: 15px;
-    font-size: large;  
+    font-size: large; 
+  
 }
 
 .hero__btn button a {
@@ -152,53 +153,87 @@ opacity: 0.4;
     border: #0f046b solid 3px; 
     background: linear-gradient(315deg, hsla(247, 52%, 38%, 1) 7%, hsla(342, 93%, 56%, 1) 59%, hsla(40, 67%, 58%, 1) 81%);
  
-}
+          background-size: 200%;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-button 2.5s linear infinite;
+    }
+    
+    @keyframes animate-button {
+        to {
+            background-position: 200%;
+        }
+    }
+
 
 
 /* Page produit*/
-.page-produits nav{
-    border-top: 5px#595194 solid;
-    border-bottom:5px#595194 solid ;
+.page-produits nav {
+    border-top: 5px solid #595194;
+    border-bottom: 5px solid #595194;
 }
 
 .page-produits nav ul {
     display: flex;
     list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 .page-produits button {
     padding: 10px;
-    border: #595194 solid 3px;
+    border: 3px solid #595194;
     border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
 }
 
 .page-produits h1 {
     text-align: center;
-    padding: 15px ;
+    padding: 15px;
 }
 
-.page-produits-main{
+.page-produits-main {
     display: flex;
-    padding:  20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 100px;
 }
 
-.produit-vedette p{
-margin: 20px 0;
+.produit-vedette-titre,
+.produit-vedette p,
+.produit-vedette-prix {
+    text-align: center;
 }
 
-.produit-vedette button{
- padding: 20px;
- background:#ac3444;
- color: white;
- font-size: 20px;
- border: none;
+.produit-vedette-prix {
+    font-weight: bolder;
+}
+
+.produit-vedette button {
+    margin: 20px auto;
+    padding: 20px;
+    background: #ac3444;
+    color: white;
+    font-size: 20px;
+    border: none;
+    display: block;
+    cursor: pointer;
+}
+
+
+.produit-vedette button:hover {
+    background: #ac3444; 
 }
 
 .produit-liste {
-display: table-column;
-columns: 2;
-padding:  20px;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    gap: 20px; 
+    padding: 20px;
+    justify-items: center; 
 }
 
 .produit-liste-item {
@@ -208,35 +243,45 @@ padding:  20px;
     background: #f1c3c3;
     width: 300px;
     height: 500px;
-}
-
-.produit-liste-img{
-    width:300px;
-    height: auto;
-    margin: 0;
-}
-
-.produit-liste-titre{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding-bottom: 10px;  
 }
 
-.produit-liste-prix{
+.produit-liste-img {
+    width: 80%;
+    height: auto;
+    margin: 15px 0;
+}
+
+.produit-liste-titre {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.produit-liste-text {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.produit-liste-prix {
     font-weight: bolder;
+    font-size: 18px;
+    margin-top: auto; 
 }
 
 
 
 .hero, .page-produits, .page-promotion, .page-succursalles {
-    padding-top: 60px; /* Adjust according to your nav height */
+    padding-top: 60px; 
 }
 
-/* Tutoriels utilisé:
-Video dans la section hero : https://www.youtube.com/watch?v=RIDA6elhmBU&ab_channel=KevinPowell
-*/
 
 
-/* Popup container */
+/* Popup  */
 .popup {
     position: fixed;
     top: 0;
@@ -244,7 +289,7 @@ Video dans la section hero : https://www.youtube.com/watch?v=RIDA6elhmBU&ab_chan
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 2px;
@@ -292,7 +337,7 @@ Video dans la section hero : https://www.youtube.com/watch?v=RIDA6elhmBU&ab_chan
     background-color: #661544;
   }
   
-  /* Close button */
+  
   .material-symbols-outlined{
     position: relative;
     top: 5px;
@@ -304,3 +349,76 @@ Video dans la section hero : https://www.youtube.com/watch?v=RIDA6elhmBU&ab_chan
     border: 1px solid #250016;
     border-radius: 4px;
   }
+
+  .invisible {
+    display: none;
+}
+
+/* Page promotion */
+
+.page-promotion h1 {
+    text-align: center;
+}
+/* Carousel */ 
+
+.section-carousel {
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    display: inline-block; 
+}
+
+.container-image-principale {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.carousel-titre, .carousel-texte {
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    z-index: 2; 
+}
+
+.carousel-titre {
+    top: 30%; 
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.carousel-texte {
+    bottom: 50%; 
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+/* Button styles */
+.arriere, .avant {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3; 
+}
+
+.arriere {
+    left: 10px;
+}
+
+.avant {
+    right: 10px;
+}
